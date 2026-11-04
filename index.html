@@ -1,24 +1,268 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Mahasiswa</title>
-  <style>
-    body { font-family: Arial; background: #eaf2f8;
-           text-align: center; padding: 40px; }
-    .card { background: white; max-width: 500px;
-            margin: auto; padding: 30px; border-radius: 15px; }
-    h1 { color: #1769aa; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0d1117;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #161b22;
+        }
+
+        header h2 {
+            color: #58a6ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #58a6ff;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero span {
+            color: #58a6ff;
+        }
+
+        .hero p {
+            color: #aaa;
+            margin: 15px 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #2ea043;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            color: #58a6ff;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            color: #bbb;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #161b22;
+            padding: 15px 25px;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .skill:hover {
+            border-color: #58a6ff;
+            transform: translateY(-5px);
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 25px;
+            width: 280px;
+            border-radius: 12px;
+        }
+
+        .project h3 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #aaa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #161b22;
+            color: #888;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Profil Mahasiswa</h1>
-    <h2>Nama: Ihsan Fajar H</h2>
-    <p>Program Studi: Manajemen Informasi Komunikasi</p>
-    <p>Saya sedang belajar Cloud Computing.</p>
-    <p>Email: mahasiswa@email.com</p>
-  </div>
+
+<header>
+    <h2>MyProfile.</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+
+    <!-- Ganti URL foto dengan foto kamu -->
+    <img src="https://via.placeholder.com/160"
+         alt="Foto Profil">
+
+    <h1>Halo, Saya <span>Nama Kamu</span></h1>
+
+    <p>
+        Welcome to my personal website!
+        Saya seorang Mahasiswa Sekolah Tinggi Multimedia
+    </p>
+
+    <a href="#about" class="btn">Kenali Saya</a>
+
+</div>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+
+    <p>
+        Halo! Nama saya Ihsan Fajar H.
+        Saya memiliki ketertarikan dalam dunia teknologi,
+        programming, dan pengembangan website.
+        Saya senang belajar hal baru dan mengembangkan
+        kemampuan untuk menciptakan sesuatu yang bermanfaat.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">GitHub</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>Website Portfolio</h3>
+            <p>Website personal untuk memperkenalkan diri.</p>
+        </div>
+
+        <div class="project">
+            <h3>Web Design</h3>
+            <p>Project desain website modern dan responsif.</p>
+        </div>
+
+        <div class="project">
+            <h3>My Coding</h3>
+            <p>Kumpulan project coding yang saya kerjakan.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's connect with me!</p>
+    <br>
+
+    <a href="https://github.com/USERNAME" class="btn">
+        GitHub
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Nama Kamu | Made with ❤️</p>
+</footer>
+
 </body>
 </html>
